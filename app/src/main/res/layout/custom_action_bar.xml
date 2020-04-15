@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:orientation="horizontal"
+    android:background="#f5f5f5"
+    >
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:layout_weight = "0.6"
+        >
+
+
+        <TextView
+            android:id = "@+id/name"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:text = "Our Students Love"
+            android:textSize = "24dp"
+            android:textColor = "#8BBF8C"
+            android:textStyle = "normal"
+            app:fontFamily = "Poppins"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>
