@@ -21,7 +21,7 @@
             android:layout_height = "match_parent"
             android:text = "Our Students Love"
             android:textSize = "24dp"
-            android:textColor = "#8BBF8C"
+            android:textColor = "#00994C"
             android:textStyle = "normal"
             app:fontFamily = "Poppins"
             android:gravity="center"/>

@@ -16,9 +16,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity{
+public class OSLActivity extends AppCompatActivity{
 
-    private String TAG = MainActivity.class.getSimpleName();
+    private String TAG = OSLActivity.class.getSimpleName();
     private ListView lv;
 
     ArrayList<HashMap<String, String>> placesList = new ArrayList<>();
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_osl);
         
         this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity{
 
             // Making a request to url (Use local IP. Localhost and 127.0.0.1 were
             //throwing some security related errors on Windows
-            String url = "http://192.168.0.8:8080/places";
+            String url = "https://usbplaces.ew.r.appspot.com/places";
             String jsonStr = sh.makeServiceCall(url);
             Log.e(TAG, "Response from url: " + jsonStr);
             if (jsonStr != null) {
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity{
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            ListAdapter adapter = new SimpleAdapter(MainActivity.this, placesList,
+            ListAdapter adapter = new SimpleAdapter(OSLActivity.this, placesList,
                     R.layout.listview_items, new String[]{ "name","descr","image"},
                     new int[]{R.id.name, R.id.descr,R.id.imageDisplay});
             lv.setAdapter(adapter);
