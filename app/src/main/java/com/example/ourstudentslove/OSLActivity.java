@@ -60,16 +60,13 @@ public class OSLActivity extends AppCompatActivity{
         protected Void doInBackground(Void... arg0) {
             HttpHandler sh = new HttpHandler();
 
-            // Making a request to url (Use local IP. Localhost and 127.0.0.1 were
-            //throwing some security related errors on Windows
+          
             String url = "https://usbplaces.ew.r.appspot.com/places";
             String jsonStr = sh.makeServiceCall(url);
             Log.e(TAG, "Response from url: " + jsonStr);
             if (jsonStr != null) {
                 try {
-                    //[] is JSONArray and {} is JSONObject so [{},{},{}...] is
-                    //an array of JSON objects that you iterate through, dont use
-                    //JSONObj for response string
+                   
                     JSONArray places = new JSONArray(jsonStr);
 
                     // looping through All places
